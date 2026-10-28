@@ -164,6 +164,21 @@ CREATE INDEX IF NOT EXISTS idx_decisions_status ON price_decisions(decision_stat
 """
 
 
+def drop_all_tables(conn: sqlite3.Connection):
+    """Safely drops all tables if they exist, respecting foreign keys."""
+    conn.execute("PRAGMA foreign_keys = OFF;")
+    tables = [
+        "price_decisions", "orders", "promotion_rules", "promotion_products",
+        "promotions", "inventory_snapshots", "competitor_observations",
+        "price_history", "cost_records", "products"
+    ]
+    cursor = conn.cursor()
+    for tbl in tables:
+        cursor.execute(f"DROP TABLE IF EXISTS {tbl};")
+    conn.commit()
+    conn.execute("PRAGMA foreign_keys = ON;")
+
+
 def init_database(db_path: str = ":memory:") -> sqlite3.Connection:
     """
     Initializes the SQLite database with full schema, foreign keys enabled,

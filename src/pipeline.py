@@ -9,7 +9,7 @@ import sqlite3
 from typing import Dict, Any, Optional
 from datetime import datetime, timedelta
 
-from src.schema import init_database
+from src.schema import init_database, SCHEMA_SQL, drop_all_tables
 from src.generator import DatasetConfig, SyntheticDataGenerator
 from src.pricing_engine import (
     PricingEngine,
@@ -36,11 +36,18 @@ def run_full_simulation_pipeline(
     """
     os.makedirs(os.path.dirname(os.path.abspath(db_path)), exist_ok=True)
     os.makedirs(os.path.dirname(os.path.abspath(ground_truth_path)), exist_ok=True)
-    if os.path.exists(db_path):
-        os.remove(db_path)
-
     # 1. Initialize Database Schema
+    if os.path.exists(db_path):
+        try:
+            os.remove(db_path)
+        except (PermissionError, OSError):
+            # If database file is in use by a background dashboard reader, drop all tables
+            pass
+
     conn = init_database(db_path)
+    drop_all_tables(conn)
+    conn.executescript(SCHEMA_SQL)
+    conn.commit()
 
     # 2. Configure Generator
     if mode == "full":
