@@ -1,0 +1,11 @@
+decision_id,sku,issue_type,expected_label,injected_details,is_intentional_edge_case
+DEC-EDGE-0001,SKU-000001,PRICE_BELOW_FLOOR,INVALID_PRICE_FLOOR,Final price ₹783.79 is below effective floor ₹989.64,1
+DEC-EDGE-0002,SKU-000002,PRICE_BELOW_FLOOR,INVALID_PRICE_FLOOR,Final price ₹2315.48 is below effective floor ₹3448.74,1
+DEC-EDGE-0003,SKU-000003,PROMOTION_STACKING,INVALID_STACKING,Applied stacked promo PROMO-2026-000001 prohibited by EXCLUSIVE stacking rule,1
+DEC-EDGE-0004,SKU-000004,PROMOTION_STACKING,INVALID_STACKING,Applied stacked promo PROMO-2026-000001 prohibited by EXCLUSIVE stacking rule,1
+DEC-EDGE-0005,SKU-000005,STALE_COMPETITOR,STALE_INPUT,Competitor observation date was 30 days old but marked CURRENT and used directly,1
+DEC-EDGE-0006,SKU-000006,STALE_COMPETITOR,STALE_INPUT,Competitor observation date was 30 days old but marked CURRENT and used directly,1
+DEC-EDGE-0007,SKU-000007,INCORRECT_MARGIN_BASIS,INVALID_MARGIN_CALCULATION,Expected margin rate was computed on base price ₹715.43 rather than final discounted price ₹562.12,1
+DEC-EDGE-0008,SKU-000008,INCORRECT_MARGIN_BASIS,INVALID_MARGIN_CALCULATION,Expected margin rate was computed on base price ₹5442.74 rather than final discounted price ₹4276.44,1
+DEC-EDGE-0009,SKU-000009,MISSING_PRICE_REASON,AUDIT_EXCEPTION,Price increased by 15% with null/empty decision_reason,1
+DEC-EDGE-0010,SKU-000010,MISSING_PRICE_REASON,AUDIT_EXCEPTION,Price increased by 15% with null/empty decision_reason,1

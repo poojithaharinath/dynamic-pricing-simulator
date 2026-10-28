@@ -1,0 +1,132 @@
+{
+  "database_tables": [
+    "competitor_observations",
+    "cost_records",
+    "inventory_snapshots",
+    "orders",
+    "price_decisions",
+    "price_history",
+    "products",
+    "promotion_products",
+    "promotion_rules",
+    "promotions"
+  ],
+  "row_counts": {
+    "competitor_observations": 212,
+    "cost_records": 50,
+    "inventory_snapshots": 1500,
+    "orders": 1577,
+    "price_decisions": 55,
+    "price_history": 1500,
+    "products": 50,
+    "promotion_products": 140,
+    "promotion_rules": 20,
+    "promotions": 20
+  },
+  "files": {
+    "csv/competitor_observations.csv": {
+      "rows": 212,
+      "sha256": "90375a5399788216e22cd9cb77c3dc355b76a0f33e68dbdabdc4386cfea76f59",
+      "bytes": 21122
+    },
+    "json/competitor_observations.json": {
+      "rows": 212,
+      "sha256": "c9977d5a1fc712b195534df355844e623e1f8327d716918c1e8aaf28bd84ef8c",
+      "bytes": 59178
+    },
+    "csv/cost_records.csv": {
+      "rows": 50,
+      "sha256": "56b76627dada5b7edfac11eb99da4ed0c28c5f2bbd0893b07608bf5b31b007ed",
+      "bytes": 4622
+    },
+    "json/cost_records.json": {
+      "rows": 50,
+      "sha256": "01121aeea8c0955852c2d9be431d43325d4852cf103f52ff1d25df81722181e0",
+      "bytes": 12386
+    },
+    "csv/inventory_snapshots.csv": {
+      "rows": 1500,
+      "sha256": "d428a0e9fe4c13d3345172cfea4b35c0e574978228ce9805fd88fa9bca18c40a",
+      "bytes": 128489
+    },
+    "json/inventory_snapshots.json": {
+      "rows": 1500,
+      "sha256": "2ae88bf4479b570198bff32de951b5958998d647d64399ebb1a14610516732c3",
+      "bytes": 392387
+    },
+    "csv/orders.csv": {
+      "rows": 1577,
+      "sha256": "414867e09b09106992c9ab8298d828762ada6c6849dec91135a37560f231ed23",
+      "bytes": 153665
+    },
+    "json/orders.json": {
+      "rows": 1577,
+      "sha256": "38e2659b477a031f6d0e02d94cd36f2a09641bab851b38ff8bbe38a1f7ffe213",
+      "bytes": 434274
+    },
+    "csv/price_decisions.csv": {
+      "rows": 55,
+      "sha256": "d6f3ba2df95484a50bff10fe758f353e22f1d88ee9f4fe5db20b02b97fcdbd02",
+      "bytes": 31280
+    },
+    "json/price_decisions.json": {
+      "rows": 55,
+      "sha256": "96b8bceecad4bc723d96d3e77ecd0ed18ae14f0cd3f062300bf53a45771cfc28",
+      "bytes": 56021
+    },
+    "csv/price_history.csv": {
+      "rows": 1500,
+      "sha256": "05254e57cac3c8f20088961174191c7c37b662ef0abe1cee8605a8bcd79d20e2",
+      "bytes": 126032
+    },
+    "json/price_history.json": {
+      "rows": 1500,
+      "sha256": "d1a17f89bd0fb0381eebfd5dec504622135d6dcac472e3769af19e324144429a",
+      "bytes": 367442
+    },
+    "csv/products.csv": {
+      "rows": 50,
+      "sha256": "5aa51ee7600397da04977fbce2755bb7dd300d27afeea0d7573b38df6e58f817",
+      "bytes": 5651
+    },
+    "json/products.json": {
+      "rows": 50,
+      "sha256": "b96e60fcb84393109b561e9e7d682645b14e4629b9c4a9a08e633e53f0a3b636",
+      "bytes": 15198
+    },
+    "csv/promotion_products.csv": {
+      "rows": 140,
+      "sha256": "b8e33a1a9dea2975df2e92eb766d643233d5f23e573bebce0da04ee55330383c",
+      "bytes": 4965
+    },
+    "json/promotion_products.json": {
+      "rows": 140,
+      "sha256": "8d9936532aa50c3ee9734c84ef8a98a2d6d045e3d8dcc2262e44642f02512b9d",
+      "bytes": 14874
+    },
+    "csv/promotion_rules.csv": {
+      "rows": 20,
+      "sha256": "8bb3a2f32caefafe2a88b424fd739063ef2d3b1c680e24a81550b5cf10ae275e",
+      "bytes": 1503
+    },
+    "json/promotion_rules.json": {
+      "rows": 20,
+      "sha256": "a445409a29c563f5cc114643e41c61c766c5954ec42fd1f52e86c0adf0260ff4",
+      "bytes": 4750
+    },
+    "csv/promotions.csv": {
+      "rows": 20,
+      "sha256": "e0f4b9b5e0ea07965a9a73f51993a96ad23017a655c00aec9110e060c5df7b50",
+      "bytes": 2089
+    },
+    "json/promotions.json": {
+      "rows": 20,
+      "sha256": "8321455553714d8a7a467d4678774e1fd63ccdcea48448d58a546e671140cb57",
+      "bytes": 5359
+    },
+    "sql/seed_data.sql": {
+      "sha256": "06850e579ef0f984edbb701957f6e00b324e09ac7852a0f1dc2796dee04e6fd2",
+      "bytes": 602944
+    }
+  }
+}
