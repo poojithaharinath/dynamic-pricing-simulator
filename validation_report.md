@@ -2,7 +2,7 @@
 
 **Dataset Mode:** `STARTER`  
 **Random Seed:** `20261022`  
-**Audit Evaluation Timestamp:** `2026-10-28T17:50:49Z`  
+**Audit Evaluation Timestamp:** `2026-10-28T18:24:14Z`  
 **Overall Validation Status:** **PASSED**  
 
 ---
@@ -45,6 +45,8 @@
 
 Independent audit detection was executed against the isolated ground truth dataset (`ground_truth/ground_truth_anomalies.csv`).  
 Ground truth labels were strictly separated and **never** provided as input features to the pricing engine.
+
+> **Scope note:** The F1-Score of 1.0000 means the validator correctly detects all **10 deliberately injected anomaly instances** (2 per edge-case type) with zero false positives and zero false negatives. This result demonstrates robust detection of the defined test cases. It does not claim perfect detection of arbitrary real-world pricing anomalies not covered by the five labelled edge-case categories.
 
 - **Total Labelled Edge Cases:** 10
 - **True Positives (TP):** 10

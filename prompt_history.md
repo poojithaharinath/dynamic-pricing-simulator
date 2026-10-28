@@ -139,6 +139,42 @@ Which of these accurately describes your current prompt_history.md?
 
 ---
 
+### Prompt 9: F1-Score Scope Clarification Request
+**Timestamp:** `2026-10-28T23:29:00+05:30`  
+**Prompt Submitted:**
+```text
+Project claims an F1-score of 1.0000, with all five anomaly types correctly detected.
+
+Which statement describes how your current src/validation.py works?
+```
+
+---
+
+### Prompt 10: End-to-End Anomaly Injection Verification
+**Timestamp:** `2026-10-28T23:38:00+05:30`  
+**Prompt Submitted:**
+```text
+project claims to inject five types of anomalies, with 10 total injected anomalies.
+
+In the version currently pushed to GitHub, are all five edge cases actually injected into the generated dataset and detected by the validator when you run the complete pipeline?
+```
+
+---
+
+### Prompt 11: Pre-Submission Final Checklist — Four Points
+**Timestamp:** `2026-10-28T23:55:18+05:30`  
+**Prompt Submitted:**
+```text
+There are four final things I recommend checking:
+1. README accuracy: Make sure the Python version, repository folder name, installation commands and run instructions are consistent.
+2. Repository access: Confirm the GitHub repository is public and opens without requiring your login.
+3. AI disclosure: Ensure prompt_history.md accurately records the prompts you used across all AI tools and explains what you reviewed, changed and tested yourself.
+4. Generated files: Check whether the large CSV exports and database need to be committed. They may be useful evidence, but unnecessary generated artifacts can make the repository harder to review. Follow the task's instructions and document any included artifacts clearly.
+Also, don't claim that the perfect F1 score proves the system can detect every real-world pricing problem. Explain that it successfully detects the deliberately injected test anomalies.
+```
+
+---
+
 ## 3. Human Review, Code Modifications & Personal Ownership
 
 The table below details exactly where AI accelerated development and what the candidate personally reviewed, tested, changed, and verified:
@@ -155,6 +191,23 @@ The table below details exactly where AI accelerated development and what the ca
 
 ---
 
-## 4. Verification Statement
+## 4. Committed Generated Artifacts — Disclosure
+
+The following generated files are intentionally committed to the repository as submission evidence:
+
+| Committed File / Directory | Reason for Inclusion |
+| :--- | :--- |
+| `data/pricing_simulation.db` | Provides a ready-to-inspect SQLite database so evaluators can query tables immediately without running the pipeline. |
+| `data/exports/csv/*.csv` | 10 CSV files (one per table) showing complete starter-mode output for offline review. |
+| `data/exports/json/*.json` | 10 JSON files equivalent to the CSV exports for API-style inspection. |
+| `data/exports/sql/seed_data.sql` | SQL seed script that can recreate all data in any SQLite-compatible database. |
+| `data/exports/export_manifest.json` | SHA-256 cryptographic manifest of all exports for reproducibility verification. |
+| `ground_truth/ground_truth_anomalies.csv` | **Core deliverable.** Isolated labelled ground truth used only for evaluation; never fed into the pricing engine. |
+
+All files above are regenerated deterministically by running `python main.py --mode starter` with seed `20261022`. Evaluators who prefer to generate fresh outputs may delete the `data/` directory and re-run the pipeline.
+
+---
+
+## 5. Verification Statement
 
 All code, tests, documentation, and database schemas in this project were executed and verified by the candidate on local development infrastructure. No paid APIs, external cloud databases, or proprietary dependencies were used.
