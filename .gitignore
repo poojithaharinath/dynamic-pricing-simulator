@@ -1,0 +1,20 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest
+.pytest_cache/
+.coverage
+
+# Streamlit
+.streamlit/
+
+# Virtual Environments
+venv/
+env/
+ENV/
+
+# Large local databases (optional: keep starter SQLite in data/ but ignore temp copies)
+*.tmp
+*.log
