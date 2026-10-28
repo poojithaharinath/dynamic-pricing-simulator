@@ -442,3 +442,4 @@ class SyntheticDataGenerator:
             "orders": len(orders),
         }
         return counts
+

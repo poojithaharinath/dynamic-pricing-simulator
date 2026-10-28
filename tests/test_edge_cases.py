@@ -39,3 +39,4 @@ def test_edge_cases_injection(tmp_path):
     cursor.execute("SELECT count(*) FROM price_decisions WHERE decision_reason IS NULL;")
     assert cursor.fetchone()[0] == 2
     conn.close()
+

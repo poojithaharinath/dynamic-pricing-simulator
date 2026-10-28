@@ -209,3 +209,4 @@ Separated from model features and decision engine inputs. Used solely for evalua
    The actual margin must be computed against **$P_{\text{final}}$**, NEVER against $P_{\text{base}}$:
    $$\text{Actual Margin Rate} = \frac{P_{\text{final}} - C}{P_{\text{final}}}$$
    If $\text{Actual Margin Rate} < M$, the promotion is **ineligible** and must be rejected.
+

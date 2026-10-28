@@ -54,3 +54,4 @@ def test_ground_truth_evaluation_metrics(populated_system):
     assert gt_metrics["precision"] == 1.0
     assert gt_metrics["recall"] == 1.0
     assert gt_metrics["f1_score"] == 1.0
+

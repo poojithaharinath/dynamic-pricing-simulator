@@ -242,3 +242,4 @@ Running `python main.py --mode starter` produces the following verified results:
 3. **Storage Engine:** SQLite was selected for zero external configuration, local file portability, and ACID compliance. WAL mode and transaction batching allow 1.8M row operations to run smoothly on standard laptops.
 4. **Competitor Scrape Simulation:** External competitor prices are generated from bounded stochastic distributions around baseline prices rather than live external web scraping.
 5. **No Commercial APIs:** Built entirely with free, open-source libraries without requiring paid cloud services, proprietary tokens, or external network access.
+

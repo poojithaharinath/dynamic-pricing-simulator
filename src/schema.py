@@ -184,3 +184,4 @@ def get_table_names(conn: sqlite3.Connection) -> list[str]:
     cursor = conn.cursor()
     cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name;")
     return [row[0] for row in cursor.fetchall()]
+

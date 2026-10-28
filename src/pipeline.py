@@ -281,3 +281,4 @@ All database entities were exported into CSV, JSON, and SQL seed scripts. Full c
 """
     with open(report_path, "w", encoding="utf-8") as f:
         f.write(markdown)
+

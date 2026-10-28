@@ -75,3 +75,4 @@ def test_check_constraints():
     cursor.execute("SELECT count(*) FROM products WHERE sku = 'SKU-000001'")
     assert cursor.fetchone()[0] == 1
     conn.close()
+

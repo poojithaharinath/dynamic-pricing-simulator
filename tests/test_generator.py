@@ -49,3 +49,4 @@ def test_generator_determinism_seed_20261022():
     assert promos1 == promos2, "Promotions generation is not deterministic"
     assert rules1 == rules2, "Rules generation is not deterministic"
     assert bridge1 == bridge2, "Bridge generation is not deterministic"
+

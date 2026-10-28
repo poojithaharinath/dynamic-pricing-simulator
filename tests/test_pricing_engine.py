@@ -141,3 +141,4 @@ def test_demand_surge_and_clearance(engine, sample_product):
     )
     assert decision_surge.pricing_rule_applied == "DEMAND_SURGE_INCREASE"
     assert decision_surge.proposed_price > 55000.0
+

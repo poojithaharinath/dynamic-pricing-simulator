@@ -418,3 +418,4 @@ elif nav_choice == "✅ Validation & Benchmark Report":
         st.markdown(report_text)
     else:
         st.warning("Validation report not found. Please run `python main.py` first.")
+
